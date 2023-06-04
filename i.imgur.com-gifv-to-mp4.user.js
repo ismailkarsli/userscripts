@@ -7,14 +7,10 @@
 // @homepageURL https://github.com/ismailkarsli/userscripts
 // @supportURL https://github.com/ismailkarsli/userscripts/issues
 // @updateURL https://raw.githubusercontent.com/ismailkarsli/userscripts/main/i.imgur.com-gifv-to-mp4.user.js
-// @version 1.0.0
+// @version 1.0.1
 // @match https://i.imgur.com/*.gifv
 // @grant none
 // @run-at document-start
 // ==/UserScript==
 
-const videoName = window.location.pathname.split("/").pop();
-const [videoId, videoExt] = videoName.split(".");
-if (videoId && videoExt === "gifv") {
-	window.location.replace(`https://i.imgur.com/${videoId}.mp4`);
-}
+window.location.replace(window.location.href.replace("gifv", "mp4"));
