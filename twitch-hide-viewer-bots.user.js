@@ -5,7 +5,7 @@
 // @author İsmail Karslı <cszn@pm.me> (https://ismail.karsli.net)
 // @namespace https://github.com/ismailkarsli
 // @homepageURL https://github.com/ismailkarsli/userscripts
-// @supportURL https://githubcom/ismailkarsli/userscripts/issues
+// @supportURL https://github.com/ismailkarsli/userscripts/issues
 // @updateURL https://raw.githubusercontent.com/ismailkarsli/userscripts/main/twitch-hide-viewer-bots.user.js
 // @version 1.0.0
 // @match https://www.twitch.tv/*
