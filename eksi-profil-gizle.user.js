@@ -14,8 +14,9 @@
 // ==/UserScript==
 
 GM_addStyle(`
-    .avatar-container, .entry-share { display: none !important }
-		.feedback-container { width: inherit !important; }
-		.entry-footer-bottom .footer-info { display: flex; flex-direction: row-reverse; }
-		ul#entry-item-list > li { padding-bottom: 40px !important }
+  .avatar-container, .entry-share { display: none !important }
+	.feedback-container { width: inherit !important; }
+	.entry-footer-bottom .footer-info { display: flex; flex-direction: row-reverse; }
+	ul#entry-item-list > li { padding-bottom: 40px !important }
+	#subscriber-badge-entry { display: none !important }
 `);
