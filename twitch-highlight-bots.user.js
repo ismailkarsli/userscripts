@@ -7,7 +7,7 @@
 // @homepageURL https://github.com/ismailkarsli/userscripts
 // @supportURL https://github.com/ismailkarsli/userscripts/issues
 // @updateURL https://raw.githubusercontent.com/ismailkarsli/userscripts/main/twitch-highlight-bots.user.js
-// @version 1.0.0
+// @version 1.0.1
 // @match https://www.twitch.tv/*
 // @grant none
 // ==/UserScript==
@@ -18,8 +18,8 @@ const MutationObserver =
 const observer = new MutationObserver((mutations, observer) => {
     for (const mutation of mutations) {
         for (const addedNode of mutation.addedNodes) {
-            if (!addedNode?.classList?.contains("chat-line__message")) continue;
-            const username = addedNode.querySelector(".chat-author__display-name")?.innerText;
+            if (!addedNode?.classList?.contains("chat-line__message") && !addedNode?.classList?.contains("seventv-message")) continue;
+            const username = (addedNode.querySelector(".chat-author__display-name") || addedNode.querySelector(".seventv-chat-user-username"))?.innerText;
             if (!username) continue;
             const isBot = bots.has(username.toLowerCase());
             if (isBot) {
